@@ -14,4 +14,6 @@ struct AlbumEntity: Serializable {
     var collectionId: Int
     var collectionName: String
     var trackCount: Int
+    var country: String
+    var releaseDate: String
 }

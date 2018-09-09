@@ -26,7 +26,7 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="jRr-DC-VrH" customClass="AlbumDetailsArtistView" customModule="iTunesAlbums" customModuleProvider="target">
-                    <rect key="frame" x="124" y="28" width="235" height="100"/>
+                    <rect key="frame" x="124" y="28" width="235" height="116.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="D91-Fp-pgN">
                             <rect key="frame" x="8" y="8" width="219" height="19.5"/>
@@ -35,13 +35,19 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="HBk-v7-k3Q">
-                            <rect key="frame" x="8" y="35.5" width="219" height="30.5"/>
+                            <rect key="frame" x="8" y="35.5" width="219" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="bbA-t6-7tR">
+                            <rect key="frame" x="8" y="63" width="219" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-aU-5Xq">
-                            <rect key="frame" x="8" y="74" width="219" height="18"/>
+                            <rect key="frame" x="8" y="90.5" width="219" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -53,21 +59,25 @@
                         <constraint firstItem="HBk-v7-k3Q" firstAttribute="trailing" secondItem="D91-Fp-pgN" secondAttribute="trailing" id="3cl-YU-Zbn"/>
                         <constraint firstItem="Aa4-aU-5Xq" firstAttribute="leading" secondItem="HBk-v7-k3Q" secondAttribute="leading" id="3qa-MD-nUN"/>
                         <constraint firstAttribute="bottom" secondItem="Aa4-aU-5Xq" secondAttribute="bottom" constant="8" id="4aI-bg-bNd"/>
+                        <constraint firstAttribute="trailing" secondItem="bbA-t6-7tR" secondAttribute="trailing" constant="8" id="8aI-Dj-TPB"/>
                         <constraint firstItem="HBk-v7-k3Q" firstAttribute="leading" secondItem="D91-Fp-pgN" secondAttribute="leading" id="GCh-y0-dTH"/>
                         <constraint firstItem="HBk-v7-k3Q" firstAttribute="top" secondItem="D91-Fp-pgN" secondAttribute="bottom" constant="8" id="M1T-tx-elg"/>
+                        <constraint firstItem="Aa4-aU-5Xq" firstAttribute="top" secondItem="bbA-t6-7tR" secondAttribute="bottom" constant="8" id="NYd-kd-6fI"/>
+                        <constraint firstItem="bbA-t6-7tR" firstAttribute="top" secondItem="HBk-v7-k3Q" secondAttribute="bottom" constant="8" id="dT2-Ax-rKH"/>
                         <constraint firstAttribute="trailing" secondItem="D91-Fp-pgN" secondAttribute="trailing" constant="8" id="dzZ-ZP-QOE"/>
                         <constraint firstItem="Aa4-aU-5Xq" firstAttribute="trailing" secondItem="HBk-v7-k3Q" secondAttribute="trailing" id="kPd-pN-9qT"/>
-                        <constraint firstItem="Aa4-aU-5Xq" firstAttribute="top" secondItem="HBk-v7-k3Q" secondAttribute="bottom" constant="8" id="lI8-ms-ADc"/>
                         <constraint firstItem="D91-Fp-pgN" firstAttribute="leading" secondItem="jRr-DC-VrH" secondAttribute="leading" constant="8" id="oww-I7-hSr"/>
+                        <constraint firstItem="bbA-t6-7tR" firstAttribute="leading" secondItem="jRr-DC-VrH" secondAttribute="leading" constant="8" id="zkx-yW-hU7"/>
                     </constraints>
                     <connections>
+                        <outlet property="albumRelease" destination="bbA-t6-7tR" id="BqJ-8s-zi3"/>
                         <outlet property="albumTitle" destination="HBk-v7-k3Q" id="QjJ-JY-9Ys"/>
                         <outlet property="artistName" destination="D91-Fp-pgN" id="rMR-bb-Dqh"/>
                         <outlet property="songsCount" destination="Aa4-aU-5Xq" id="0G2-2p-9b2"/>
                     </connections>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JBS-9Z-SXb" customClass="AlbumDetailsSongsTableView" customModule="iTunesAlbums" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="136" width="375" height="531"/>
+                    <rect key="frame" x="0.0" y="152.5" width="375" height="514.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
@@ -110,7 +120,7 @@
                 <outlet property="albumImage" destination="eny-cX-rel" id="Egn-zJ-p63"/>
                 <outlet property="albumSongsTable" destination="JBS-9Z-SXb" id="WfL-PQ-roh"/>
             </connections>
-            <point key="canvasLocation" x="33" y="88"/>
+            <point key="canvasLocation" x="32.5" y="87.5"/>
         </view>
     </objects>
 </document>

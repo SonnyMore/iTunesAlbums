@@ -19,6 +19,11 @@ class AlbumDetailsView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupTable()
+        setupView()
+    }
+    
+    private func setupView() {
+        
     }
     
     private func setupTable() {

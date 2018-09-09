@@ -38,6 +38,7 @@ class AlbumDetailsVC: UIViewController {
     
     private func setupVC() {
         self.title = "Описание альбома"
+        //hero.isEnabled = true
     }
     
     private func setupView() {

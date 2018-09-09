@@ -7,7 +7,6 @@ target 'iTunesAlbums' do
   pod 'Moya'
   pod 'Kingfisher'
   pod 'SVProgressHUD'
-  pod 'Hero'
   # Pods for iTunesAlbums
 
   target 'iTunesAlbumsTests' do
